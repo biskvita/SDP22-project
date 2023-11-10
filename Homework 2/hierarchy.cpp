@@ -734,10 +734,10 @@ Hierarchy::Hierarchy(Hierarchy&& r) noexcept
 
 Hierarchy::Hierarchy(const Hierarchy& r)
 {
-    this->boss = r.boss;
     this->employeesCount = r.employeesCount;
     this->level = r.level;  
     this->name = r.name; 
+    this->boss = new Node("Uspeshnia");
 
     Node* cpy = r.boss;
     copy(cpy, this->boss);
